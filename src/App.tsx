@@ -1,9 +1,10 @@
-import "./App.css";
+import "./assets/fonts/fonts.css";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <>
-      <div>Test</div>
+      <Hero />
     </>
   );
 }

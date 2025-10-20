@@ -1,13 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Colors */
+  --bg-dark: #1a1a1a;
+  --bg-light: #f5f5f5;
+
+  --text-light: #f4f4f4;
+  --text-light-muted: #f4f4f466;
+
+  --text-dark: #0a0a0a;
+  --text-dark-muted: #0a0a0a66;
+
+  --accent: #fd3c22;
+  --accent-muted: #fd3c2266;
+
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--text-light);
+  background-color: var(--bg-dark);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,15 +28,86 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* Tailwind Custom Classes */
+@theme inline {
+  --color-bg-dark: var(--bg-dark);
+  --color-bg-light: var(--bg-light);
+
+  --color-text-light: var(--text-light);
+  --color-text-light-muted: var(--text-light-muted);
+
+  --color-text-dark: var(--text-dark);
+  --color-text-dark-muted: var(--text-dark-muted);
+
+  --color-accent: var(--accent);
+  --color-accent-muted: var(--accent-muted);
+}
+
+@layer components {
+  /* Silk Serif */
+  .display-serif {
+    font-family: "Silk Serif", serif;
+    font-size: 180px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -6%;
   }
-  a:hover {
-    color: #747bff;
+
+  .h1-serif {
+    font-family: "Silk Serif", serif;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1%;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .h2-serif {
+    font-family: "Silk Serif", serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -1%;
+  }
+
+  /* Neue Helvetica */
+  .display-sans {
+    font-family: "Helvetica Neue", serif;
+    font-size: 180px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -6%;
+  }
+
+  .h1-sans {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1%;
+  }
+
+  .h2-sans {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -1%;
+  }
+
+  .body-sans {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -1%;
+  }
+
+  .label-sans {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: -1%;
   }
 }

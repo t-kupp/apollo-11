@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/src/assets/fonts/helvetica-neue/HelveticaNeueRegular.woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/src/assets/fonts/helvetica-neue/HelveticaNeueMedium.woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Silk Serif";
+  src: url("/src/assets/fonts/silk-serif/SilkSerifRegular.woff2");
+  font-weight: 400;
+}
