@@ -14,7 +14,10 @@
   --accent: #fd3c22;
   --accent-muted: #fd3c2266;
 
+  --padding-global: 48px;
+
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(10px, calc(16 / 1440 * 100vw), 999px);
   line-height: 1.5;
   font-weight: 400;
 
@@ -33,29 +36,43 @@
   --color-bg-dark: var(--bg-dark);
   --color-bg-light: var(--bg-light);
 
-  --color-text-light: var(--text-light);
-  --color-text-light-muted: var(--text-light-muted);
+  --color-light: var(--text-light);
+  --color-light-muted: var(--text-light-muted);
 
-  --color-text-dark: var(--text-dark);
-  --color-text-dark-muted: var(--text-dark-muted);
+  --color-dark: var(--text-dark);
+  --color-dark-muted: var(--text-dark-muted);
 
   --color-accent: var(--accent);
   --color-accent-muted: var(--accent-muted);
+
+  --spacing-global: var(--padding-global);
 }
 
 @layer components {
+  .section {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .section-inner {
+    padding: calc(var(--padding-global) * 2) var(--padding-global);
+  }
+
   /* Silk Serif */
   .display-serif {
     font-family: "Silk Serif", serif;
-    font-size: 180px;
+    font-size: 11.25rem;
     font-weight: 400;
-    line-height: 1;
+    line-height: 0.9;
     letter-spacing: -6%;
   }
 
   .h1-serif {
     font-family: "Silk Serif", serif;
-    font-size: 54px;
+    font-size: 3.5rem;
     font-weight: 400;
     line-height: 1.1;
     letter-spacing: -1%;
@@ -63,7 +80,15 @@
 
   .h2-serif {
     font-family: "Silk Serif", serif;
-    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -1%;
+  }
+
+  .body-serif {
+    font-family: "Silk Serif", serif;
+    font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.2;
     letter-spacing: -1%;
@@ -71,16 +96,16 @@
 
   /* Neue Helvetica */
   .display-sans {
-    font-family: "Helvetica Neue", serif;
-    font-size: 180px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 11.25rem;
     font-weight: 400;
-    line-height: 1;
+    line-height: 0.9;
     letter-spacing: -6%;
   }
 
   .h1-sans {
     font-family: "Helvetica Neue", sans-serif;
-    font-size: 54px;
+    font-size: 3.5rem;
     font-weight: 400;
     line-height: 1.1;
     letter-spacing: -1%;
@@ -88,7 +113,7 @@
 
   .h2-sans {
     font-family: "Helvetica Neue", sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.2;
     letter-spacing: -1%;
@@ -96,7 +121,7 @@
 
   .body-sans {
     font-family: "Helvetica Neue", sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.2;
     letter-spacing: -1%;
@@ -104,10 +129,15 @@
 
   .label-sans {
     font-family: "Helvetica Neue", sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
     text-transform: uppercase;
     line-height: 1.2;
     letter-spacing: -1%;
   }
+}
+
+button {
+  cursor: pointer;
+  padding: 2px 8px;
 }
