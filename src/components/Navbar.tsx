@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="px-global h-16 fixed inset-0">
+    <nav className="px-global h-16 fixed inset-0 z-9999">
       <ul className="flex w-full items-center justify-between h-full">
         <li>
           <a href="/" className="label-sans py-1">

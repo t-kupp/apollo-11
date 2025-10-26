@@ -6,13 +6,13 @@
   --bg-light: #f5f5f5;
 
   --text-light: #f4f4f4;
-  --text-light-muted: #f4f4f466;
+  --text-light-muted: #f4f4f475;
 
   --text-dark: #0a0a0a;
-  --text-dark-muted: #0a0a0a66;
+  --text-dark-muted: #0a0a0a75;
 
   --accent: #fd3c22;
-  --accent-muted: #fd3c2266;
+  --accent-muted: #fd3c2275;
 
   --padding-global: 48px;
 

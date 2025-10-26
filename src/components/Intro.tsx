@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
 
-export default function Intro({ masterTl }: { masterTl: GSAPTimeline }) {
+export default function Intro() {
   useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -16,8 +16,6 @@ export default function Intro({ masterTl }: { masterTl: GSAPTimeline }) {
 
     const h1Split = SplitText.create(".jfk-quote", { type: "words", mask: "words" });
     tl.from([h1Split.words], { yPercent: 100, opacity: 0, stagger: 0.1 });
-
-    masterTl.add(tl);
   });
 
   return (

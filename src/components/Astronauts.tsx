@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import { astronautsData } from "../data/astronauts";
 
-export default function Astronauts({ masterTl }: { masterTl: GSAPTimeline }) {
+export default function Astronauts() {
   useGSAP(() => {
     gsap.fromTo(
       ".astronaut-portrait",
@@ -39,7 +39,7 @@ export default function Astronauts({ masterTl }: { masterTl: GSAPTimeline }) {
 
   return (
     <section className="section astronauts bg-bg-light text-dark">
-      <div className="section-inner">
+      <div className="section-inner py-48">
         <div className="grid grid-cols-3 gap-x-6">
           {astronautsData.map((astronaut) => (
             <div key={astronaut.name} className="text-center">
