@@ -51,7 +51,6 @@
 @layer components {
   .section {
     display: flex;
-
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -140,4 +139,8 @@
 button {
   cursor: pointer;
   padding: 2px 8px;
+}
+
+.pin-spacer {
+  background-color: var(--bg-dark);
 }

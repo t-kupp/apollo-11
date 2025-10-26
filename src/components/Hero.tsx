@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <>
-      <section className="min-h-screen h-full section relative items-center justify-center">
+      <section className="cont min-h-screen h-full section relative items-center justify-center">
         <div className="px-global">
           <h1 className="display-serif text-[16rem]  uppercase">Apollo 11</h1>
           <div className="flex justify-end">
